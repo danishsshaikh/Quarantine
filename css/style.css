@@ -214,7 +214,7 @@ a:focus {
 .tm-down-arrow:hover,
 .tm-down-arrow:focus {
   color: white;
-  background: #3496d8;
+  background: #040e47;
 }
 
 /* Introduction */
@@ -235,117 +235,7 @@ a:focus {
   color: #3496d8;
 }
 
-/* Work */
 
-.tm-work-description {
-  max-width: 650px;
-  width: 100%;
-  font-size: 0.9rem;
-}
-
-.tm-gallery-container {
-  padding-top: 70px;
-  padding-bottom: 120px;
-}
-
-.tm-gallery-item {
-  margin: 0 15px;
-}
-
-.slick-dots {
-  bottom: -65px;
-}
-
-.slick-dots li {
-  margin: 0 13px;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before,
-.slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #3ba0dd;
-}
-
-.slick-dots li button:before {
-  font-size: 26px;
-}
-
-/* Hover Effect */
-/* Common style */
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  /* margin: 10px 1%;
-  min-width: 320px;
-	max-width: 480px;
-	max-height: 360px;
-	width: 48%; */
-  background: #3085a3;
-  text-align: center;
-  cursor: pointer;
-}
-
-.grid figure img {
-  position: relative;
-  display: block;
-  min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
-}
-
-.grid figure figcaption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-
-.grid figure h2 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-}
-
-.grid figure h2 span {
-  font-weight: 800;
-}
-
-.grid figure h2,
-.grid figure p {
-  margin: 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
-}
 
 /*---------------*/
 /***** Honey *****/
@@ -614,7 +504,8 @@ ul{
 ul li{
     list-style: none;
     border-top: 1px solid #262626;
-    border-bottom: 1px solid #262626;
+    border-bottom: 4px solid;
+    border-bottom-color: #040e47;
     margin: -1px 0;
     transition: 0.5s;
 }
@@ -626,6 +517,7 @@ ul li:hover{
 ul li a{
     display: block;
     border-right: 1px solid #262626;
+/*    border-left: 1px solid #262626;*/
     text-decoration: none;
     color: #262626;
 }
@@ -636,17 +528,18 @@ ul li a span{
 }
 
 ul li a span:nth-child(1){
-    width: 30px;
+    width: 50px;
     text-align: center;
     border-left: 1px solid #262626;
     border-right: 1px solid #262626;
-    padding: 5px;
+    padding: 8px;
     transition: 0.5s;
     color: #262626
 }
 
 ul li:hover a span:nth-child(1){
-    background:#f44336;
+/*    background:#f44336;*/
+    background: #f6b285;
 }
 
 ul li a span:nth-child(1) .fas{
@@ -654,7 +547,7 @@ ul li a span:nth-child(1) .fas{
 }
 
 ul li:hover a span:nth-child(1) .fas{
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
     color: #fff;
 }
 
@@ -662,26 +555,6 @@ ul li a span:nth-child(2){
     padding: 10px;
 }
 
-.collapsible {
-  color: white;
-  cursor: pointer;
-  padding: 1px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 14px;
-}
 
-.active, .collapsible:hover {
-  background-color: white;
-}
-
-.content {
-  padding: 0 1px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
 
 
