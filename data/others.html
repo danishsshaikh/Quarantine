@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Organization</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Other Stuffs</h2>
+
+    <div class="box">
+        <ul class="directory-list">
+            <li>Others
+                <ul>
+                    <ul>
+                        <li><a href="https://drive.google.com/drive/u/0/folders/1aP9jXBuAGpcGCJfkdhOchepMPB3cuyIh" type="button">Google Drive Link-1</a></li>
+                        <li><a href="https://drive.google.com/drive/u/0/folders/105slzIkIVtWKttAVMAbBQefPOOcHzH35" type="button">Google Drive Link-2</a></li>
+                        <li><a href="https://drive.google.com/drive/u/0/folders/1lfPkIAuEKEhd58iunEy4EGmkg2IwK664" type="button">Google Drive Link-3</a></li>
+
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        // get all folders in our .directory-list
+        var allFolders = $(".directory-list li > ul");
+        allFolders.each(function() {
+
+            // add the folder class to the parent <li>
+            var folderAndName = $(this).parent();
+            folderAndName.addClass("folder");
+
+            // backup this inner <ul>
+            var backupOfThisFolder = $(this);
+            // then delete it
+            $(this).remove();
+            // add an <a> tag to whats left ie. the folder name
+            folderAndName.wrapInner("<a href='#' />");
+            // then put the inner <ul> back
+            folderAndName.append(backupOfThisFolder);
+
+            // now add a slideToggle to the <a> we just added
+            folderAndName.find("a").click(function(e) {
+                $(this).siblings("ul").slideToggle("slow");
+                //             e.preventDefault();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
