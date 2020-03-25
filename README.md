@@ -1,4 +1,3 @@
-
 <h1 align ="center"> :orange_book: <a href ="https://danishsshaikh.github.io/Quarantine/">Quarantine Time</a> :scroll: </h1>
 
 ![Index Page](https://github.com/danishsshaikh/Quarantine/blob/master/img/index.PNG)
@@ -10,12 +9,16 @@ Here's an platform to learn new things or develop a new habit.
 
 The website contains of the following format so far. You can checkout courses or games that is being provided by the company to help everyone out with the bad times :)
 
+</br>
+
 ## :open_file_folder: Table Of Content
 
 
 Organization | Courses | Games | Others
 ------------ |------------|------------|------------
 It consists of many Virtual Organizations and Clubs which are helping each other in different aspects together | It consists of numerious numbers of websites that are providing free courses at the moment.| Well the title says it all, a curative list of games being free by their respective studios.| As, the name suggests. It mostly have Google Drive links with many Movies, Anime and Series.
+
+</br>
 
 ## :octocat: How to Contribute?
 
@@ -41,12 +44,16 @@ It consists of many Virtual Organizations and Clubs which are helping each other
 ### Step 10: HURRAY!
 That's it. You have done it! Thanks, I hope you're resources would be helpful to many of us ;)
 
+</br>
+
 ## 📊 Technologies Used
 
 - HTML5
 - CSS3
 - Bootstrap
 - Javascript
+
+</br>
 
 ## 💯 Tools Used
 
@@ -57,6 +64,8 @@ That's it. You have done it! Thanks, I hope you're resources would be helpful to
 - [GitHub Pages](https://pages.github.com/)
 
 - [Font Awesome](https://fontawesome.com/)
+
+</br>
 
 ## :heart_decoration: Acknowledgements
 
