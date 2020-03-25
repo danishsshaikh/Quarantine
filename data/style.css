@@ -30,7 +30,7 @@ h2 {
 @media (min-width: 544px) {
   .box {
     margin: 40px auto;
-    max-width: 440px;
+    max-width: 800px;
     padding: 40px;
   }
 }
