@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Organization</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Organizations</h1>
+    <div class="box">
+        <ul class="directory-list">
+            <li>Others
+                <ul>
+                    <ul>
+                        <li><a href="https://www.council.club/lunch?ref=producthunt" type="button">Council Club</a></li>
+                        <li><a href="https://www.goodsamapp.org/NHSvolunteerresponders?fbclid=IwAR1ymbN1146TBzF-rgsnIt2KaKszyBOJ8NLKkUic4SR71fMu55mroN19jxc" type="button">GoodSAM</a></li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        // get all folders in our .directory-list
+        var allFolders = $(".directory-list li > ul");
+        allFolders.each(function() {
+
+            // add the folder class to the parent <li>
+            var folderAndName = $(this).parent();
+            folderAndName.addClass("folder");
+
+            // backup this inner <ul>
+            var backupOfThisFolder = $(this);
+            // then delete it
+            $(this).remove();
+            // add an <a> tag to whats left ie. the folder name
+            folderAndName.wrapInner("<a href='#' />");
+            // then put the inner <ul> back
+            folderAndName.append(backupOfThisFolder);
+
+            // now add a slideToggle to the <a> we just added
+            folderAndName.find("a").click(function(e) {
+                $(this).siblings("ul").slideToggle("slow");
+                //             e.preventDefault();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
