@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Hobbies</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Time for New Hobbies</h1>
+    <div class="box">
+        <ul class="directory-list">
+            <li>Gardening
+                <ul>
+                    <ul>
+                        <li><a href="https://kidsgardening.org/gardening-toolbox/" type="button">Kids Gardening Org</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Music
+                <ul>
+                    <ul>
+                        <li><a href="https://delraestudios.lpages.co/i-can-virtual-choir-and-so-can-you/" type="button">Virtual Choir</a></li>
+                        <li><a href="https://musiclab.chromeexperiments.com/Experiments" type="button">Chrome Music Lab</a></li>
+                        <li><a href="https://www.musictheory.net/" type="button">Music Theory</a></li>
+                        <li><a href="https://www.smartmusic.com/" type="button">Smart Music</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Flow
+                <ul>
+                    <ul>
+                        <li><a href="https://www.youtube.com/user/flowtoys" type="button">flowtoys</a></li>
+                        <li><a href="https://www.youtube.com/user/TaoAvatar20" type="button">DrexFactor Poi</a></li>
+                        <li><a href="https://www.youtube.com/user/jeremiahthejuggler/playlists" type="button">Jeremiah Johnston</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Cook / Bake
+                <ul>
+                    <ul>
+                        <li><a href="https://www.foodnetwork.com/recipes/packages/recipes-for-kids/cooking-with-kids" type="button">FoodNetwork</a></li>
+                        <li><a href="https://www.raddishkids.com/pages/suddenlyhomeschooling" type="button">RadishKids</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q" type="button">Tasty</a></li>
+                        <li><a href="https://www.youtube.com/channel/UC-vObULK1w635bdFQpNlbQA" type="button">Hoopla</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCMfXv2enRXepxG92VoxfrEg" type="button">WhatsUpMom</a></li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        // get all folders in our .directory-list
+        var allFolders = $(".directory-list li > ul");
+        allFolders.each(function() {
+
+            // add the folder class to the parent <li>
+            var folderAndName = $(this).parent();
+            folderAndName.addClass("folder");
+
+            // backup this inner <ul>
+            var backupOfThisFolder = $(this);
+            // then delete it
+            $(this).remove();
+            // add an <a> tag to whats left ie. the folder name
+            folderAndName.wrapInner("<a href='#' />");
+            // then put the inner <ul> back
+            folderAndName.append(backupOfThisFolder);
+
+            // now add a slideToggle to the <a> we just added
+            folderAndName.find("a").click(function(e) {
+                $(this).siblings("ul").slideToggle("slow");
+                //             e.preventDefault();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
