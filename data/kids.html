@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Kids</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kids Section</h1>
+    <div class="box">
+        <ul class="directory-list">
+            <li>Educational Resources
+                <ul>
+                    <ul>
+                        <li><a href="https://kids.nationalgeographic.com/">National Geographic Kids</a></li>
+
+                        <li><a href="http://www.mathscore.com/">Math Score</a></li>
+
+                        <li><a href="https://www.highlightskids.com/">Highlights KIDS</a></li>
+
+                        <li><a href="https://boddlelearning.com/">boodle</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+            <li>Educational Games
+                <ul>
+                    <ul>
+                        <li><a href="https://www.arcademics.com/">Arcademics</a></li>
+
+                        <li><a href="https://www.abcya.com/">abcya</a></li>
+
+                        <li><a href="https://www.breakoutedu.com/funathome">Breakout EDU</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+            <li>Activities
+                <ul>
+                    <ul>
+                        <li><a href="https://www.allkidsnetwork.com/">All Kids Network</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        // get all folders in our .directory-list
+        var allFolders = $(".directory-list li > ul");
+        allFolders.each(function() {
+
+            // add the folder class to the parent <li>
+            var folderAndName = $(this).parent();
+            folderAndName.addClass("folder");
+
+            // backup this inner <ul>
+            var backupOfThisFolder = $(this);
+            // then delete it
+            $(this).remove();
+            // add an <a> tag to whats left ie. the folder name
+            folderAndName.wrapInner("<a href='#' />");
+            // then put the inner <ul> back
+            folderAndName.append(backupOfThisFolder);
+
+            // now add a slideToggle to the <a> we just added
+            folderAndName.find("a").click(function(e) {
+                $(this).siblings("ul").slideToggle("slow");
+                //             e.preventDefault();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
