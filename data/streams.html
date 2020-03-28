@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Live Streams</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Live Streams / 360 Videos / Virtual Tours</h1>
+    <div class="box">
+        <ul class="directory-list">
+            <li>Live Streams
+                <ul>
+                    <ul>
+                        <li><a href="https://www.youtube.com/results?search_query=monterey+bay+aquarium+live+cam" type="button">Monterey Bay Aquarium</a></li>
+                        <li><a href="https://explore.org/livecams">Explore.org Live Nature Cams</a></li>
+                        <li><a href="https://www.facebook.com/EPZoo/?__tn__=%2CdkC-R&eid=ARDcQwVR_0fmAAnq9o5AaEM2mHZI1UbfWebPVKgRkMezh1SYaC5smAjDi5JuShyJkU-e5ZoYAzBvOv_U&hc_ref=ARRJ9oEdr1oCz6_2hxl4dcj7s4mnnLyOymbCiiTZYheiJ5PlThhzW4fi4lPGtzuOARs&redirect=false">Elmwood Park Zoo</a></li>
+                        <li><a href="https://nationalzoo.si.edu/webcams/panda-cam">The Smithsonian National Zoo</a></li>
+                        <li><a href="https://www.houstonzoo.org/explore/webcams/">Houston Zoo</a></li>
+                        <li><a href="https://www.georgiaaquarium.org/webcam/african-penguin-cam/">The Georgia Aquarium</a></li>
+                        <li><a href="https://www.aqua.org/Experience/live">The National Aquarium</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+            <li>360 Videos
+                <ul>
+                    <ul>
+                        <li><a href="https://www.farmfood360.ca/">FarmFood 360</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+            <li>Virtual Tours
+                <ul>
+                    <ul>
+                        <li><a href="https://accessmars.withgoogle.com/">Mars</a></li>
+                        <li><a href="https://britishmuseum.withgoogle.com/">The Museum of the World</a></li>
+                        <li><a href="https://www.louvre.fr/en/visites-en-ligne">Louvre</a></li>
+                    </ul>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        // get all folders in our .directory-list
+        var allFolders = $(".directory-list li > ul");
+        allFolders.each(function() {
+
+            // add the folder class to the parent <li>
+            var folderAndName = $(this).parent();
+            folderAndName.addClass("folder");
+
+            // backup this inner <ul>
+            var backupOfThisFolder = $(this);
+            // then delete it
+            $(this).remove();
+            // add an <a> tag to whats left ie. the folder name
+            folderAndName.wrapInner("<a href='#' />");
+            // then put the inner <ul> back
+            folderAndName.append(backupOfThisFolder);
+
+            // now add a slideToggle to the <a> we just added
+            folderAndName.find("a").click(function(e) {
+                $(this).siblings("ul").slideToggle("slow");
+                //             e.preventDefault();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
