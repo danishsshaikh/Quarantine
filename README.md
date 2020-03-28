@@ -14,10 +14,14 @@ The website contains of the following format so far. You can checkout courses or
 ## :open_file_folder: Table Of Content
 
 
-Organization | Courses | Games | Others
+Something New! | Livestreams / Virtual Tours | Organization | Courses
 ------------ |------------|------------|------------
-It consists of many Virtual Organizations and Clubs which are helping each other in different aspects together | It consists of numerious numbers of websites that are providing free courses at the moment.| Well the title says it all, a curative list of games being free by their respective studios.| As, the name suggests. It mostly have Google Drive links with many Movies, Anime and Series.
+It consists of new hobbies that you can take off during this days which includes Gardening, Music and many more | Has list of Zoos and Museum that are providing Virtual tours.| It consists of many Virtual Organizations and Clubs which are helping each other in different aspects together. | It consists of numerious numbers of websites that are providing free or cheap courses at the moment.
 
+
+Games | Kids | Others 
+------------ |------------|------------
+Well the title says it all, a curative list of games being free by their respective studios. | List of websites that will help the Kid to learn, study and play games. | As, the name suggests. It mostly have Google Drive links with many Movies, Anime and Series.| 
 </br>
 
 ## :octocat: How to Contribute?
